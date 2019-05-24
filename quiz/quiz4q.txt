@@ -1,0 +1,16 @@
+1) the target, the dependency lists, and then the commands themself
+2) the target is a file that is to be made, ususally either object code (.o file) or executable.
+3) the dependancy list is a list of files that are needed in order to create the target.
+4) pseudo-targets are targets that dont always have the target file on the system.
+5) temp.print();
+6) acessor method for retrive, mutator method for set
+7) 3.14159
+8) 200
+9) bubble sort
+10)
+10.0 	19.1	24.2 	37.3 	42.4 	48.5	52.6 	59.7 	65.8 	78.9
+pass 1: low: 0 high: 9 mid: 4;
+pass 2: low: 5 high: 9 mid: 7
+pass 3: 
+pass 4:
+pass 5:

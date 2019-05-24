@@ -1,0 +1,16 @@
+1)
+template <class T>
+void swap(T& val1, T& val2)
+
+2)
+template <class T>
+Stuff<T> Stuff<T>::operator=(const Stuff<T>& other)
+
+3)
+List<int> mylist;
+
+4)
+Stack
+
+5)
+Queue

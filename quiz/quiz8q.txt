@@ -1,0 +1,7 @@
+1) a pointer to the calling object
+2) a method that gets called when the object gets deleted/destroyed
+3) Widget::~Widget();
+4) Widget::Widget(Widget& copy);
+5) Widget& Widget::operator=(const Widget& other)
+6) when an object is passed BY VALUE, when and object is returned By value, when a new object is created and initilized with an exsisting object.
+7) 1) check for self assignment 2) delete dynamic array for left object 3) copy all non dynamic members 4) allocate new dynamic storage for left object  5) copy storages from right object dynamic storage into the left one 6) return the left object (*this)

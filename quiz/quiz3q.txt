@@ -1,0 +1,22 @@
+1)
+a method is a member function of a class
+2)
+public allows for a data member to be acessed even outside of class functions/methods by somthing that has acess to the object
+3)
+public allows for a method to be called in other functions even outside of class functions/methods  by somthing that has acess to the object.
+4)
+private allows only for an in-class function/method to acess said data member 
+5)
+private allows only for an in-class function/method to call said method
+6)
+'class' creates all methods and members private by default
+7)
+'struct' creates all methods and members public by default in order to make C classes acessable by c++
+8)
+a constucter is a class function/method that usually contains default values for some of the private and public data members.
+9)
+a constucter gets called when a class object is created. alternativly, a default constucter is called when there are no parameters passed from the object at creation. 
+10)
+a class may have one defalt constuctor and have as many constuctors as needed
+11)
+the return type of a constuctor is nothing (void?)

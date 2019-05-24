@@ -1,0 +1,47 @@
+2) newnode->next = head;
+   head = newnode;
+   
+3) tail->next = newnode;
+   tail = newnode;
+
+4) newnode->next = current->next;
+   current->next = newnode;
+   
+5) template <class T>
+   size_t list<T>::size(node<T>* p) const
+   {
+      if (p == nullptr)
+         return 0;
+      else 
+         return 1 + size(p->next);
+   }
+   
+6) template <class T>
+   size_t list<T>::size() const
+   {
+      size_t count = 0;
+      
+      for (node<T>* p = head; p != nullptr; p = p->next)
+         count++;
+      return count;
+   }
+   
+7) bool (*funcptr)(double, double);
+
+8) 
+
+ 26 10 67 30 18 54 41 28 
+ |        |           |
+ start    mid        end
+ 
+ pivot val = 30
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ end:
+ 28 10 26 18 30 54 41 67

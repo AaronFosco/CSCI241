@@ -1,0 +1,175 @@
+MOST OF THE INFORMATION FOR THIS IS IN 
+http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/array-based.html
+// for the "get" selection
+int Stack::operator[](size_t n) const
+{
+   return array[n];
+}
+
+
+// the "set" function
+int& Stack::operator[](size_t n)
+{
+   return array[n];
+}
+
+
+
+
+//testing the output steps
+1) default constuctor DONE
+2) output operator (<<)
+3) size & capacity
+4) empty
+
+/*1-4 completes
+   cout << "Testing default constructor\n\n";
+    
+   Stack s1;
+    
+   cout << "s1: " << s1 << endl;
+   cout << "s1 size: " << s1.size() << ", capacity: " << s1.capacity() << endl;
+   cout << "s1 is " << ((s1.empty()) ? "empty\n" : "not empty\n");
+   cout << endl;
+*/
+
+5) push & reserve
+
+/*
+out << "Testing push()\n\n";
+    
+   for (int i = 10; i < 80; i+= 10)
+      s1.push(i);
+    
+   cout << "s1: " << s1 << endl;
+   cout << "s1 size: " << s1.size() << ", capacity: " << s1.capacity() << endl;
+   cout << "s1 is " << ((s1.empty()) ? "empty\n" : "not empty\n");
+   cout << endl;
+    
+   for (int i = 15; i < 85; i+= 10)
+      s1.push(i);
+    
+   cout << "s1: " << s1 << endl;
+   cout << "s1 size: " << s1.size() << ", capacity: " << s1.capacity() << endl;
+   cout << "s1 is " << ((s1.empty()) ? "empty\n" : "not empty\n");
+   cout << endl;
+*/
+
+6)copy constuctor
+7) top method
+8) pop method
+
+/* 6-8
+ cout << "Testing copy constructor()\n\n";
+    
+   Stack s2 = s1;
+    
+   cout << "s1: " << s1 << endl;
+   cout << "s1 size: " << s1.size() << ", capacity: " << s1.capacity() << endl;
+   cout << "s1 is " << ((s1.empty()) ? "empty\n" : "not empty\n");
+   cout << endl;
+    
+   cout << "Testing top()\n\n";
+    
+   cout << "Top item of s1: " << s1.top() << endl << endl;
+    
+   cout << "Testing pop()\n\nTop item of s1: ";
+    
+   while (!s1.empty())
+      {
+      cout << s1.top() << ' ';
+      s1.pop();
+      }
+    
+   cout << endl << endl;
+   cout << "s1: " << s1 << endl;
+   cout << "s1 size: " << s1.size() << ", capacity: " << s1.capacity() << endl;
+   cout << "s1 is " << ((s1.empty()) ? "empty\n" : "not empty\n");
+   cout << endl;
+*/
+
+9) copy assignment operator
+10) clear
+11) subscript operator (write first)
+12) subscript operator (then read)
+13) operator == 
+(the info for the
+bool Stack::operator==(const Stack& rhs) const
+is incorect, so pay attention if it changed:)
+
+old desc:
+This method should return true if the characters stored in the string array of the object that called the method are identical to the characters stored in the string array of the NIUString object passed in as rhs.
+
+The logic for this method is less difficult that it might initially appear to be. The first step is to compare the stack sizes of the two stacks. If they are different, return false (two stacks of different lengths can not be equal).
+
+Otherwise, loop through the elements of both stack arrays, starting at 0 and stopping when you reach the stack size. (The size of which stack doesn't matter, since you know they're the same by this point.) Compare the current element from each stack array. If elements are different, return false. If the elements are the same, don't return true; do nothing and let the loop continue.
+
+Once the loop ends and you've reached the end of both stacks, return true.
+
+
+
+
+_________________________________________________________________
+
+
+
+
+extra info about push and reserve:::
+
+void Stack::reserve(size_t n)
+   {
+   if (n > stkCapacity)
+      {
+      //the scope of this array will only last
+      //to the end of the method
+      int* tempArray = new int[n];
+
+      // if the setting of size is n = 1,
+      // this for loop gets skipped, otherwise
+      // the stkarray gets copied
+      for (size_t i = 0; i < stkSize; ++i)
+         {
+         tempArray[i] = stkArray[i];
+         }
+      //set local var
+      stkCapacity = n;
+      
+      //deletes old array, hopefully null if not
+      // copied
+      delete[] stkArray;
+      
+      //the pointer of stkarray gets updated to
+      //the temp array that will be deleted 
+      //at the end of its scopt
+      stkArray = tempArray;
+      }
+   }
+   
+
+
+// If stack is full, allocate additional storage
+if (stkSize == stkCapacity)
+   {
+   if (stkCapacity == 0)
+      reserve(1);
+   else
+      reserve(stkCapacity * 2);
+   }
+
+stkArray[stkSize] = newItem;
+++stkSize;
+
+//this code tests the push statement by inputting
+//10, 20, 30, 40, 50, 60, 70 into s1.
+// 1   2  4    8   8   8   8 (size of array)
+//output fill look like this:
+
+s1: 10 20 30 40 50 60 70 
+s1 size: 7, capacity: 8
+s1 is not empty
+
+//code:
+ cout << "Testing push()\n\n";
+    
+   for (int i = 10; i < 80; i+= 10)
+      s1.push(i);

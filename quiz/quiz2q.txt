@@ -1,0 +1,46 @@
+1)
+#include iomanip
+2)
+showpos() will show a positive sign on any positive value through the current iostream
+3)
+0
+4)
+g++ -c sorce.cpp
+5)
+setw()
+6)
+the number of digits after the decimal point
+7) 
+char * name;
+should create a pointer to a random char?
+char name[1] will create a single array of chars that is a pointer?
+8)
+//cstring is needed since I'm using strcpy()
+#include <cstring>
+...
+...
+...
+   char searchname[41]; //assuming the name will be 40 or less chars.
+   strcpy(searchname, studentName);
+9)
+#include <cctype>
+...
+...
+...
+int startf(char a[])
+{
+   int count = 0;
+   for (int i = 0; a[i] != '\0'; i++)
+      (isdigit(a[i]))?count++:0;
+   return count;
+}
+
+10)
+int startf(char a[], char b)
+{
+   int count = 0;
+   for (int i = 0; a[i] != '\0'; i++)
+      (a[i]==b)?count++:0;
+   return count;
+}
+}

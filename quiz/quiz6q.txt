@@ -1,0 +1,12 @@
+1) fstream
+
+7) STATIC
+8) file
+9) extern int studencount = 0
+10) static int studencount = 0
+//addign static storage to a static object, it'll change how
+//the linker works
+11) changes from auto to static. the variable will be persisant
+though the life of the variable
+12) data members and methods of a class
+13) creatved at runtime and destroyed when the program stopps

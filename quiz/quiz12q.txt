@@ -1,0 +1,10 @@
+1)A
+2)A
+3)D
+4)B
+5)A
+6)a method with a prototype but no definition
+7)any class that has one pure virtual method
+8)C
+9)B
+10)B

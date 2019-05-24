@@ -1,0 +1,22 @@
+1)
+//this is NOT a method since it doesn't need the 'thing::' prefix.
+bool operator<(const thing& thing1, const thing& thing2)
+{
+...
+}
+2)
+//this however IS a method
+bool thing::operator<(const thing& thing2) const
+3)
+friend is a class of a function that is given direct acess to the private members of a class,
+4)
+friend can be coded anywhere in a class declaration
+5)
+ostream operator<<(ostream& leftstrem, const thing& thing1)
+6)
+when does not change the member data members of the object that called it and 
+const at the end of the prototype & header
+7)
+simple operator*(const simeple& simple1, const simple& simple2)
+8)
+simple simple::operator*(const simeple& simple2) const
